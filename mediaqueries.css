@@ -53,7 +53,7 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    height: 100vh;
     margin-bottom: 0;
   }
   article {
@@ -90,6 +90,10 @@
     width: auto;
     height: 46vw;
     justify-content: center;
+    margin-bottom: 140px;
+  }
+  .section__text{
+    height: 100vh;
   }
   .section__text__p2 {
     font-size: 1.25rem;
@@ -99,5 +103,9 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .about{
+    height: 100vh;
+    margin-top: 50px;
   }
 }
