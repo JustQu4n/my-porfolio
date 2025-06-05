@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">_2anh.qu4n</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">_2anh.qu4n</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Anh Quan | Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <span class="logo-accent">_</span>2anh<span class="logo-accent">.</span>qu4n
+        </a>
+        
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          
+          <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/avatar.png"
-          alt="John Doe profile picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title"><span id="typing-text"></span><span class="cursor">|</span></h1>
-        <p class="section__text__p2">Backend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('https://www.topcv.vn/xem-cv/VANdCQYDXgIJBllUV1AGUwFVB1QMUFwKWgIMVg2265')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+            <span class="subtitle">Hello, I'm</span>
+            <h1 class="title"><span id="typing-text"></span><span class="cursor">|</span></h1>
+            <p class="description">Backend Developer specialized in building robust and scalable applications</p>
+            
+            <div class="hero-buttons">
+              <a href="https://www.topcv.vn/xem-cv/VANdCQYDXgIJBllUV1AGUwFVB1QMUFwKWgIMVg2265" class="btn btn-outline" target="_blank">
+                <i class="fas fa-download"></i> Download CV
+              </a>
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Contact Me
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+            <div class="image-wrapper">
+              <img src="./assets/avatar.png" alt="Nguyen Anh Quan profile picture" />
+            </div>
+          </div>
         </div>
-        <div id="socials-container">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/cassanoqu4n/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/JustQu4n'"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://www.instagram.com/_2anh.qu4n/'"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://www.facebook.com/2amquan/'"
-          />
+        
+        <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+          <a href="https://www.linkedin.com/in/cassanoqu4n/" class="social-link" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/JustQu4n" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/_2anh.qu4n/" class="social-link" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/2amquan/" class="social-link" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        
+        <div class="scroll-down">
+          <a href="#about">
+            <span class="mouse">
+              <span class="wheel"></span>
+            </span>
+            <span class="arrow">
+              <span></span>
+              <span></span>
+            </span>
+          </a>
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/avatar2.jpg"
-            alt="Profile picture"
-            class="about-pic"
-            style="border-radius: 20px; width: 350px; height: 350px; object-fit: cover;"
-          />
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Get To Know More</span>
+          <h2 class="section-title">About Me</h2>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Backend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <img src="./assets/vku.png" alt="" style="width: 90px; height: 50px" />
-              
-              <p>Bachelor's degree Software Engineer</p>
-            </div>
+        
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+            <img src="./assets/24.jpg" alt="Profile picture"  />
           </div>
-          <div class="text-container">
+          
+          <div class="about-text" data-aos="fade-left" data-aos-delay="400">
             <p>
               I am a backend developer with a passion for creating efficient and
               scalable applications. I have experience in various technologies
@@ -132,201 +132,351 @@
               skills. My goal is to contribute to innovative projects that make
               a difference.
             </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-container">
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" class="skill-logo" />
-          <p>HTML</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/726px-CSS3_logo_and_wordmark.svg.png" alt="CSS logo" class="skill-logo" />
-          <p>CSS</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript logo" class="skill-logo" />
-          <p>JavaScript</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png" alt="TypeScript logo" class="skill-logo" />
-          <p>PHP</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Material UI logo" class="skill-logo" />
-          <p>Java</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="PostgreSQL logo" class="skill-logo" />
-          <p>Laravel</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4zPog-0j0JR_yZglxPhTPZXxN2iMTQ3Dw&s" alt="Node.js logo" class="skill-logo" />
-          <p>Spring Boot</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" alt="Express.js logo" class="skill-logo" />
-          <p>NodeJS</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Git logo" class="skill-logo" />
-          <p>Express</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Git logo" class="skill-logo" />
-          <p>ReactJS</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="Git logo" class="skill-logo" />
-          <p>Github</p>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" alt="Git logo" class="skill-logo" />
-          <p>Docker</p>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project1.png"
-                alt="Project 1"
-                class="project-img"
-                style="width: 50%; height: 50%;"  
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">ONTECH-Website Ecommerce Laravel</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/JustQu4n/ONTECH-Ecommerce-Website'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project2.jfif"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AirBnb- Booking App FullStack NextJS</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/JustQu4n/AirBokin-Full-Stack-with-Next.js-13'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project3.jfif"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">CareerVibe-Find work Fullstack app MERN</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/JustQu4n/CareerVibe-Frontend-Reactjs-'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            
+            <div class="about-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Experience</h3>
+                  <p>1+ years<br>Backend Development</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="info-text">
+                  <h3>Education</h3>
+                  <p>Bachelor's degree<br>Software Engineering</p>
+                  <div class="university-logo">
+                    <img src="./assets/vku.png" alt="University Logo" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:nguyenanhquan01102002@gmail.com">nguyenanhquan01102002@gmail.com</a></p>
+
+    <!-- Skills Section -->
+    <section id="experience" class="skills section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Explore My</span>
+          <h2 class="section-title">Skills</h2>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/cassanoqu4n/">LinkedIn</a></p>
+        
+        <div class="skills-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h3 class="group-title">Frontend</h3>
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <h4>HTML</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <h4>CSS</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                  </div>
+                  <h4>JavaScript</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                  </div>
+                  <h4>ReactJS</h4>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill-group">
+              <h3 class="group-title">Backend</h3>
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-php"></i>
+                  </div>
+                  <h4>PHP</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-laravel"></i>
+                  </div>
+                  <h4>Laravel</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-java"></i>
+                  </div>
+                  <h4>Java</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                  </div>
+                  <h4>NodeJS</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                  </div>
+                  <h4>Express</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon spring">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4zPog-0j0JR_yZglxPhTPZXxN2iMTQ3Dw&s" alt="Spring Boot">
+                  </div>
+                  <h4>Spring Boot</h4>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill-group">
+              <h3 class="group-title">Tools & Others</h3>
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <h4>GitHub</h4>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="fab fa-docker"></i>
+                  </div>
+                  <h4>Docker</h4>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Browse My Recent</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        
+        <div class="projects-content">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="./assets/project1.png" alt="ONTECH Ecommerce Website" />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">ONTECH Ecommerce Website</h3>
+              <p class="project-description">A full-featured ecommerce platform built with Laravel, featuring product management, user authentication, and shopping cart functionality.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JustQu4n/ONTECH-Ecommerce-Website" class="btn btn-sm" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/" class="btn btn-sm btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img src="./assets/project2.jfif" alt="AirBnb Booking App" />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">AirBnb Booking App</h3>
+              <p class="project-description">A full-stack Next.js application that replicates core features of Airbnb, including property listings, bookings, and user profiles.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JustQu4n/AirBokin-Full-Stack-with-Next.js-13" class="btn btn-sm" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/" class="btn btn-sm btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-image">
+              <img src="./assets/project3.jfif" alt="CareerVibe Job Search Platform" />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">CareerVibe Job Search Platform</h3>
+              <p class="project-description">A MERN stack application that connects job seekers with employers, featuring job listings, application tracking, and user profiles.</p>
+              <div class="project-tech">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JustQu4n/CareerVibe-Frontend-Reactjs-" class="btn btn-sm" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/" class="btn btn-sm btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Get in Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+            <h3>Let's talk about your project</h3>
+            <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <a href="mailto:nguyenanhquan01102002@gmail.com">nguyenanhquan01102002@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/cassanoqu4n/" target="_blank">linkedin.com/in/cassanoqu4n</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Location</h4>
+                  <p>Da Nang, Vietnam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form" data-aos="fade-left" data-aos-delay="400">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#" class="logo">
+            <span class="logo-accent">_</span>2anh<span class="logo-accent">.</span>qu4n
+          </a>
+        </div>
+        
+        <div class="footer-links">
+          <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-      </nav>
-      <p>Copyright &#169; 2025 Nguyen Anh Quan. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
-    integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"
-    type="text/javascript"></script>
-  </body>
+        
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/cassanoqu4n/" class="social-link" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/JustQu4n" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/_2anh.qu4n/" class="social-link" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/2amquan/" class="social-link" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyen Anh Quan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
 </html>
